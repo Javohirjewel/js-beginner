@@ -25,7 +25,7 @@ if(typeof +numberOfFilms === "number" && !isNaN(numberOfFilms) ){
             }
         }
         else{
-           
+            let  numberOfFilms = prompt(" Qancha film ko'rgansiz?")
         }
 }
 else{

@@ -2,7 +2,12 @@
 let  numberOfFilms = prompt(" Qancha film ko'rgansiz?")
 
 if(typeof +numberOfFilms === "number" && !isNaN(numberOfFilms) ){
-        if(numberOfFilms!=0 && numberOfFilms!=undefined){
+    for(let i = 0; i < numberOfFilms; i++){
+        if(numberOfFilms=="" || numberOfFilms==null){
+           i--;
+        }
+        else{
+            numberOfFilms = prompt(" Qancha film ko'rgansiz?")
             let personalMovieDB = {
                 count: numberOfFilms,
                 movies : {},
@@ -14,20 +19,27 @@ if(typeof +numberOfFilms === "number" && !isNaN(numberOfFilms) ){
                 let LastFilm = prompt("Oxirgi ko'rgan filmlaringizdan biri?,");
                 let GenresFilm = prompt("Ko'rgan filmingiz janri")
                 let RatingFilm = prompt("Uni qancha baholagan bo'lardingiz?" )
-                if(typeof +RatingFilm === "number" && !isNaN(RatingFilm)){
+                if(LastFilm== '' || LastFilm == null){
                     personalMovieDB.movies[LastFilm] = RatingFilm;
                     personalMovieDB.genres = GenresFilm;
                     console.log(personalMovieDB)
+
+                if(LastFilm == '' || RatingFilm == '' || LastFilm==null || RatingFilm==null){
+                   i--;
+                }else{
+                    personalMovieDB.movies[LastFilm] = RatingFilm;
+                }   
                 }
                 else{
-                alert("Iltimos Reyting uchun son kiritvoren")
+                    alert("Iltimos Reyting uchun son kiritvoren")
                 }    
             }
         }
-        else{
-            let  numberOfFilms = prompt(" Qancha film ko'rgansiz?")
-        }
+    }
+        
 }
+
+
 else{
     alert("Kino soni so'ralyapti")
 }

@@ -3,6 +3,12 @@
 let club = ['Barcelona', 'PSJ', 'Manchester United', 'Real Madrid', 'Juventus', 'Machester City', 'Nasaf', 'Chelsea', 'Arsenal', 'Liverpool']
 
 
+for(let i in club){
+    console.log(i + " " + club[i])
+}
+
+
+
 function arrPush(str){
     if(str){
         club[club.length] = str
@@ -20,11 +26,9 @@ function arrPop(){
 
 arrPush("Atletico Madtid")
 arrPop()
+arrPush("Atletico Madtid")
 
 
-for(let i in club){
-    console.log(i + " " + club[i])
-}
 
 
 

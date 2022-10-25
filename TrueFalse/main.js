@@ -24,7 +24,7 @@ function main(str2){
     let arr=[];
     for(let i=0; i++; i<str2.length){
         if(str2[i]!==str2[i+1]){
-            arr.push(str1[i])
+            arr.push(str2[i])
         }
     }
     return arr
